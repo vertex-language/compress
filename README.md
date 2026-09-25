@@ -9,7 +9,7 @@ production-grade encoders and decoders for raw DEFLATE (RFC 1951), zlib
 (RFC 1950), gzip (RFC 1952), and high-speed LZ4 block compression, composing
 natively with Vertex's `io` streaming protocols.
 
-> **Status.** Pure-Vertex implementations of `compress/flate`, `compress/zlib`,
+> **Status.** Implementations of `compress/flate`, `compress/zlib`,
 > `compress/gzip`, and `compress/lz4` with zero external dependencies. The full
 > test suite in `tests/check` passes, covering round-trip verification,
 > streaming `io.Reader`/`io.Writer` adapters, checksum validation, and edge cases.
@@ -36,9 +36,8 @@ natively with Vertex's `io` streaming protocols.
      through `io.Copy(from: &source, to: &compressor)`.
 2. **Zero Native Dependencies.**
    - All Huffman coding, bit manipulation, LZ77 matching, CRC-32, and Adler-32
-     algorithms are implemented in pure Vertex.
-   - Runs identically across macOS (ARM64) and Windows (x86-64) without linking
-     system C libraries or external dynamic modules.
+     algorithms run identically across macOS (ARM64) and Windows (x86-64) without
+     linking system C libraries or external dynamic modules.
 3. **Strict Checksum & Framing Verification.**
    - `compress/zlib` validates RFC 1950 CMF/FLG header consistency and the 32-bit
      big-endian Adler-32 trailer checksum.
