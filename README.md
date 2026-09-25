@@ -1,13 +1,10 @@
 # compress
 
-[![package: stdlib](https://img.shields.io/badge/package-stdlib-f4f4f5?style=flat-square&labelColor=e4e4e7&color=18181b)](https://github.com/vertex-language)
+[![package: vs-package](https://img.shields.io/badge/package-vs--package-f4f4f5?style=flat-square&labelColor=e4e4e7&color=18181b)](https://github.com/vertex-language)
 [![formats: flate | zlib | gzip | lz4](https://img.shields.io/badge/formats-flate%20%7C%20zlib%20%7C%20gzip%20%7C%20lz4-f4f4f5?style=flat-square&labelColor=e4e4e7&color=18181b)](https://github.com/vertex-language/compress)
 [![status: tested](https://img.shields.io/badge/status-tested-f4f4f5?style=flat-square&labelColor=e4e4e7&color=18181b)](https://github.com/vertex-language/compress)
 
-Standard library compression formats for the Vertex programming language:
-production-grade encoders and decoders for raw DEFLATE (RFC 1951), zlib
-(RFC 1950), gzip (RFC 1952), and high-speed LZ4 block compression, composing
-natively with Vertex's `io` streaming protocols.
+Standard compression formats: encoders and decoders for raw DEFLATE (RFC 1951), zlib (RFC 1950), gzip (RFC 1952), and high-speed LZ4 block compression, composing natively with `io` streaming protocols.
 
 > **Status.** Implementations of `compress/flate`, `compress/zlib`,
 > `compress/gzip`, and `compress/lz4` with zero external dependencies. The full
@@ -51,6 +48,12 @@ natively with Vertex's `io` streaming protocols.
 ---
 
 ## Quick Start
+
+Run any entry point with:
+
+```bash
+vsc run main.vs
+```
 
 ### 1. In-Memory Compression & Decompression (`gzip`)
 
