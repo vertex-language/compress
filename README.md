@@ -165,4 +165,4 @@ vsc run -replace io=../io tests/check/main.vs
 
 ## License
 
-MIT License. Copyright (c) 2026 Vertex Language Authors.
+[MIT](LICENSE)
