@@ -1,11 +1,13 @@
 // compress test suite: comprehensive checks for flate, zlib, gzip, and lz4.
 package main
 
-import "compress/flate"
-import "compress/zlib"
-import "compress/gzip"
-import "compress/lz4"
-import "io"
+import (
+    "compress/flate"
+    "compress/gzip"
+    "compress/lz4"
+    "compress/zlib"
+    "io"
+)
 
 var failures: int32 = 0
 

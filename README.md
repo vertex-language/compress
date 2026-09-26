@@ -49,10 +49,10 @@ Standard compression formats: encoders and decoders for raw DEFLATE (RFC 1951), 
 
 ## Quick Start
 
-Run any entry point with:
+Run the test suite in `cmd/` directly with `vsc run`:
 
 ```bash
-vsc run main.vs
+vsc run check
 ```
 
 ### 1. In-Memory Compression & Decompression (`gzip`)
@@ -80,8 +80,10 @@ func main() -> int32 {
 ```swift
 package main
 
-import "compress/zlib"
-import "io"
+import (
+    "compress/zlib"
+    "io"
+)
 
 func main() -> int32 {
     var output = io.Cursor()
