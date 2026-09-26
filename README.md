@@ -8,7 +8,7 @@ Standard compression formats: encoders and decoders for raw DEFLATE (RFC 1951), 
 
 > **Status.** Implementations of `compress/flate`, `compress/zlib`,
 > `compress/gzip`, and `compress/lz4` with zero external dependencies. The full
-> test suite in `tests/check` passes, covering round-trip verification,
+> test suite in `cmd/check` passes, covering round-trip verification,
 > streaming `io.Reader`/`io.Writer` adapters, checksum validation, and edge cases.
 
 ---
@@ -154,11 +154,8 @@ func main() -> int32 {
 Run the test suite via the Vertex compiler:
 
 ```bash
-# Run the test suite via the package product
-vsc run -replace io=../io check
-
-# Or directly target the test source file
-vsc run -replace io=../io tests/check/main.vs
+# Run the test suite (cmd/check); the Desktop's vs.work finds ../io
+vsc run check
 ```
 
 ---
